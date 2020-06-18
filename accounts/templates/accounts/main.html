@@ -13,7 +13,20 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" type="text/css" href="{% static '/css/main.css' %}">
+    <style>
+    body {
+      background-color: #ebeff5;
+    }
+    #total-orders {
+      background-color: #4984b8;
+    }
+    #orders-delivered {
+      background-color: #1fa774;
+    }
+        #orders-pending {
+      background-color: #d3494e;
+    }
+</style>
   </head>
   <body>
     {% include 'accounts/navbar.html' %}
