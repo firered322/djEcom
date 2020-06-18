@@ -6,15 +6,16 @@
     <h5>Customers</h5>
     <hr />
     <div class="card card-body">
-      <a href="#" class="btn btn-dark">Create Customer</a>
+      <a href="#" class="btn btn-warning">Create Customer</a>
       <table class="table table-sm">
         <tr>
+          <th></th>
           <th>Customer</th>
           <th>Phone</th>
         </tr>
         {% for customer in customers %}
           <tr>
-            <td><a href="{% url 'customer' customer.id %}">View</a></td>
+            <td><a class="btn btn-sm btn-info" href="{% url 'customer' customer.id %}">View</a></td>
             <td>{{ customer.name }}</td>
             <td>{{ customer.phone }}</td>
 
@@ -27,7 +28,7 @@
     <h5>Last 5 Orders</h5>
     <hr />
     <div class="card card-body">
-      <a href="#" class="btn btn-dark">Create order</a>
+      <a href="{% url 'create_order' %}" class="btn btn-warning">Create order</a>
       <table class="table table-sm">
         <tr>
           <th>Product</th>
